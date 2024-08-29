@@ -1,15 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Roboto:wght@400;500;700;900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Inter, system-ui;
+  /* font-family: Inter, system-ui; */
+  /* font-family: "Inter", sans-serif; */
+  font-family: "Inter", system-ui;
+
+  /* letter-spacing: 0.05px; Adjust to looks like the model project (24px) */
   --project_purple: rgb(100 21 255);
   --project_white: rgb(247 250 252);
+  --project_text: rgb(124 139 161);
 }
 
 html {
   scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  tab-size: 4;
 }
 
 body {
@@ -27,6 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  flex: 1 1 0%;
 }
 
 .nav__links {
@@ -37,7 +46,8 @@ body {
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
-  margin: 0 24px;
+  margin: 0 25px; /*Adjust to looks like the model project (24px) */
+  letter-spacing: 0.05px; /*Adjust to looks like the model project */
   align-items: center;
 }
 
@@ -50,6 +60,7 @@ body {
   align-items: center;
   font-weight: 900;
   font-size: 24px;
+  letter-spacing: 0.5px; /*Adjust to looks like the model project */
   padding: 0 0 4px;
   margin-right: 24px;
 }
@@ -70,8 +81,8 @@ a:hover {
 
 h1 {
   font-size: 48px;
-  padding-top: 24px;
-  letter-spacing: 1.5px;
+  padding-top: 27px; /*Adjust to looks like the model project */
+  line-height: 1.25;
 }
 
 .two__columns {
@@ -104,11 +115,13 @@ h5 {
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 48px;
   font-weight: 900;
   letter-spacing: 0.025em;
   color: #243e63;
-  margin-bottom: 12px;
+  margin-bottom: 8px; /* Adjust to looks like the model project */
+  width: 100%;
+  text-align: center;
 }
 
 .three__columns p {
@@ -117,21 +130,68 @@ h2 {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.625;
-  color: rgb(124 139 161);
+  color: var(--project_text);
   text-align: center;
+  letter-spacing: 0.02px; /*Adjust to looks like the model project */
+}
+
+.empty {
+  margin-top: 2.5rem;
+  width: 100%;
 }
 
 .three__columns--boxes {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 48px;
 }
+
 .three__columns--box {
-  height: 210px;
+  height: 210px; /* height: 100%; */
   width: calc(100% / 3 - 32px);
   margin: 0 16px;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
   padding: 32px 8px;
+  text-align: left;
+}
+
+.three__columns--icon {
+  flex-shrink: 0;
+  border-style: solid;
+  border-color: rgb(226, 232, 240);
+  border-radius: 999px;
+  border-width: 1px;
+  padding: 20px 20px;
+  /* text-align: center; */
+  width: 66px;
+  height: 66px;
+}
+
+.three__columns--text--container {
+  margin: 8px 0 0 16px;
+}
+
+.three__columns image {
+  /* max-width: 100%; /* */
+}
+
+.three__columns--title {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.025em;
+}
+
+.three__columns--text--container p {
+  color: var(--project_text);
+  font-size: 16px;
+  text-align: left;
+  margin-top: 16px;
+  font-weight: 500;
+  line-height: 2;
 }
 
 .column__right--image {
@@ -173,14 +233,14 @@ li {
   background-color: var(--project_purple);
   color: var(--project_white);
   font-size: 14px;
-  font-weight: 650;
+  font-weight: 600;
   padding: 12px 34px;
   border: none;
   border-radius: 48px;
 }
 
 .column__left {
-  width: 42%;
+  width: 41.5%;
   height: 100%;
   display: flex;
   margin: 0 auto;
@@ -189,11 +249,12 @@ li {
 }
 
 .column__right {
-  width: 58%;
+  width: 58.5%;
 }
 
 .column__left--p {
   font-size: 18px;
+  letter-spacing: 0.05px; /*Adjust to looks like the model project */
   padding: 32px 0;
 }
 
@@ -222,11 +283,12 @@ li {
   color: var(--project_white);
   font-size: 16px;
   font-weight: 550;
-  padding: 16px 36px;
+  width: 160px; /*Adjust to looks like the model project */
+  padding: 16px 32px; /*Adjust to looks like the model project (16 34)*/
   border: none;
   border-radius: 48px;
   position: absolute;
-  right: 6px;
+  right: 7px;
   top: 8px;
 }
 
@@ -235,15 +297,15 @@ li {
 }
 
 .column__left--customers img {
-  max-width: 410px;
+  max-width: 405px;
   opacity: 0.5;
   margin: 16px 0 0;
 }
 
 .column__left--customers p {
   font-size: 12px;
-  font-weight: 700;
-  opacity: 0.4;
+  font-weight: 750;
+  opacity: 0.32;
 }
 
 /* 
