@@ -817,17 +817,14 @@ li {
   align-items: center;
 }
 
-/* .footer__icons--center {
-} */
-
 .footer__icons--right {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  gap: 10px;
+  justify-content: center;
 }
 
 .footer__logo {
-  /* filter: grayscale(1) invert(1); */
   width: 32px;
   vertical-align: middle;
 }
@@ -841,37 +838,20 @@ li {
 
 .footer__ico {
   display: flex;
-  margin: 0 auto;
   align-items: center;
   height: 32px;
   width: 32px;
-
-  margin-right: 16px;
+  justify-content: center;
   cursor: pointer;
   border-radius: 9999px;
   background-color: var(--project_white);
   padding: 8px;
   color: rgb(26 32 44);
   transition-duration: 300ms;
-  position: relative;
-  /* align-items: center; */
 }
 
 .footer__ico:last-child {
   margin-right: 0px;
-}
-
-.footer__ico i {
-  height: 16px;
-  width: 16px;
-  position: absolute;
-  bottom: 0;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  /* margin-top: auto; */
-  /* top: 16px; */
-  /* align-items: center; */
-  /* vertical-align: auto; */
 }
 
 .footer__ico:hover {
