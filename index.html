@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./style.css" />
   <title>UI Project</title>
-  <script src="https://kit.fontawesome.com/00857f9905.js" crossorigin="anonymous">
-  </script>
+  <script src="https://kit.fontawesome.com/00857f9905.js" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
 </head>
 
 <body>
@@ -26,8 +26,29 @@
             <li><a href="#" class="nav__link">Pricing</a></li>
             <li><a href="#" class="nav__link">Contact Us</a></li>
             <li><a href="#" class="nav__link nav__link--login">Login</a></li>
-            <li><button class="btn__menu">Sign Up</button></li>
+            <li><button class="btn">Sign Up</button></li>
           </ul>
+
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <div class="menu__links">
+
+              <a href="#" class="menu__link" onclick="closeMenu()">About</a>
+              <a href="#" class="menu__link" onclick="closeMenu()">Blog</a>
+              <a href="#" class="menu__link" onclick="closeMenu()">Pricing</a>
+              <a href="#" class="menu__link" onclick="closeMenu()">Contact Us</a>
+              <a href="#" class="menu__link" onclick="closeMenu()">Login</a>
+              <button class="btn btn__drop">Sign Up</button>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
     </nav>
@@ -161,7 +182,7 @@
           magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat.
         </p>
-        <button class="btn__menu quality__work--wrap--button">Learn More</button>
+        <button class="btn quality__work--wrap--button">Learn More</button>
       </div>
       <div class="column__right half">
         <img src="./assets/hero-screenshot.png" alt="">
@@ -262,7 +283,7 @@
           </div>
 
         </div>
-        <button class="btn__menu values__button">Learn More</button>
+        <button class="btn values__button">Learn More</button>
       </div>
       <div class="column__right half">
         <img src="./assets/prototype-illustration.svg" alt="">
