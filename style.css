@@ -1021,6 +1021,7 @@ li {
 
   h2 {
     font-size: 36px;
+    min-height: 0px;
   }
 
   p {
@@ -1137,6 +1138,7 @@ li {
 
   .left {
     text-align: center;
+    margin-bottom: 0px;
   }
 
   .quality__work--wrap {
